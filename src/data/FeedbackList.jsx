@@ -1,18 +1,18 @@
 // import PomoItem from "../PomoItem"
-import FeedbackData from "./FeedbackData"
+import FeedbackData from "./FeedbackData";
 function FeedbackList(feedback) {
-  if (!feedback||feedback.length===0){
-    return<p>No Feedback yet</p>
-    }
+  if (!feedback || feedback.length === 0) {
+    return <p>No Feedback yet</p>;
+  }
 
   return (
     <div className="Feedback List">
-      {feedback.map((item)=>(
-        <FeedbackData key={item.id} item={item}/>
+      {feedback.map((item) => (
+        <FeedbackData key={item.id} item={item} />
       ))}
       List
-      </div>
-  )
+    </div>
+  );
 }
 
-export default FeedbackList
+export default FeedbackList;

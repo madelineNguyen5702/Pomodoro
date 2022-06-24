@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FeedbackData from "./data/FeedbackData";
+import FeedbackData from "../data/FeedbackData";
 function PomoItem() {
   const [rating, setRating] = useState(7);
   const [text, setText] = useState("This is an example");
