@@ -1,11 +1,13 @@
+import { Route, Routes } from "react-router-dom";
+import Comments from "./components/Comments";
 import PomoItem from "./components/PomoItem";
 
 function App() {
   return (
-    <div className="container">
-      <h1>Hello again</h1>
-      <PomoItem />
-    </div>
+    <Routes>
+      <Route path="/comments" element={<Comments />} />
+      <Route path="/" element={<PomoItem />} />
+    </Routes>
   );
 }
 

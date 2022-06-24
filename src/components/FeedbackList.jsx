@@ -1,5 +1,5 @@
 // import PomoItem from "../PomoItem"
-import FeedbackData from "./FeedbackData";
+import FeedbackData from "../data/FeedbackData";
 function FeedbackList(feedback) {
   if (!feedback || feedback.length === 0) {
     return <p>No Feedback yet</p>;

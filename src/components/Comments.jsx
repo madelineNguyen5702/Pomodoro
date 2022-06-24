@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FeedbackData from "../data/FeedbackData";
 
-function PomoItem() {
+function Comments() {
   const handleClick = (index) => {
     let cloneFeedback = [...feedback];
     cloneFeedback[index].rating--;
@@ -14,9 +14,8 @@ function PomoItem() {
       {feedback.map(({ rating, text }, index) => {
         return (
           <div className="card" key={index}>
-            <div className="num-display">{rating}</div>
-            <div className="text-display">{text}</div>
-            <a href="/comments">Click here</a>
+            <input type="text" placeholder="Some comments" />
+            <button onClick={() => handleClick(index)}>Click here</button>
           </div>
         );
       })}
@@ -24,4 +23,4 @@ function PomoItem() {
   );
 }
 
-export default PomoItem;
+export default Comments;
