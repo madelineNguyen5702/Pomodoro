@@ -1,24 +1,18 @@
 import { useState } from "react";
-import FeedbackData from "../data/FeedbackData";
+import commentData from "../data/commentData";
 
 function Comments() {
-  const handleClick = (index) => {
-    let cloneFeedback = [...feedback];
-    cloneFeedback[index].rating--;
-    setFeedback(cloneFeedback);
-  };
-  const [feedback, setFeedback] = useState(FeedbackData);
-
   return (
     <div className="container">
-      {feedback.map(({ rating, text }, index) => {
+      {commentData.map((item, index) => {
         return (
-          <div className="card" key={index}>
-            <input type="text" placeholder="Some comments" />
-            <button onClick={() => handleClick(index)}>Click here</button>
-          </div>
+          <form className="card" key={index}>
+            <input type="text" placeholder={item} />
+            <button type="submit">Click here</button>
+          </form>
         );
       })}
+      <h2>{`Comments: ${commentData.length} `}</h2>
     </div>
   );
 }

@@ -2,11 +2,7 @@ import { useState } from "react";
 import FeedbackData from "../data/FeedbackData";
 
 function PomoItem() {
-  const handleClick = (index) => {
-    let cloneFeedback = [...feedback];
-    cloneFeedback[index].rating--;
-    setFeedback(cloneFeedback);
-  };
+ 
   const [feedback, setFeedback] = useState(FeedbackData);
 
   return (
